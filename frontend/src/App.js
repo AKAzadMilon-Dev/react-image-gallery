@@ -1,7 +1,14 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./components/Menu";
+import HomePage from "./components/pages/HomePage";
 function App() {
   return (
-    <h1>home page</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/menu" element={<Menu/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
